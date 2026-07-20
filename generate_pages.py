@@ -105,14 +105,10 @@ def make_page(**kwargs):
 </nav>
 
 <main id="main">
-{breadcrumb}
 <section class="ph">
   <div class="ph-inner">
-    <div class="ph-layout" style="grid-template-columns:1fr">
-      <div>
-        {h1}
-      </div>
-    </div>
+    {breadcrumb}
+    {h1}
   </div>
 </section>
 
@@ -992,12 +988,12 @@ def generate_pages():
     for path, data in EXAM_PAGES.items():
         bc = make_breadcrumb([('Home', '/'), ('Exames', '/exames/'), (data['title'].split('|')[0].strip(), '')])
         h1_html = make_ptag(data['tag']) + make_ptitle(data['h1'], data.get('h1_span', ''))
-        bc += h1_html
         html = make_page(
             title=data['title'],
             description=data['description'],
             canonical=data['canonical'],
             breadcrumb=bc,
+            h1=h1_html,
             content=data['content']
         )
         write_file(path, html)
@@ -1006,12 +1002,12 @@ def generate_pages():
         items = [('Home', '/'), ('Unidades', '/unidades/'), (data['h1'].split('em')[0].strip() if 'em' in data['h1'] else data['h1'], '')]
         bc = make_breadcrumb(items)
         h1_html = make_ptag(data['tag']) + make_ptitle(data['h1'], data.get('h1_span', ''))
-        bc += h1_html
         html = make_page(
             title=data['title'],
             description=data['description'],
             canonical=data['canonical'],
             breadcrumb=bc,
+            h1=h1_html,
             content=data['content']
         )
         write_file(path, html)
@@ -1019,14 +1015,13 @@ def generate_pages():
     for path, data in INFO_PAGES.items():
         items = [('Home', '/'), (data['title'].split('|')[0].strip(), '')]
         bc = make_breadcrumb(items)
-        if not data.get('no_ph_section'):
-            h1_html = make_ptitle(data['h1'])
-            bc += h1_html
+        h1_html = make_ptitle(data['h1']) if not data.get('no_ph_section') else ''
         html = make_page(
             title=data['title'],
             description=data['description'],
             canonical=data.get('canonical', 'https://proradiologia.odo.br/' + path.replace('.html', '/')),
             breadcrumb=bc,
+            h1=h1_html,
             content=data['content']
         )
         write_file(path, html)
@@ -1077,6 +1072,7 @@ def generate_exames_listing():
         description='Confira todos os exames de radiologia odontol\u00f3gica dispon\u00edveis na PRO Radiologia: panor\u00e2mica, tomografia, documenta\u00e7\u00e3o e mais.',
         canonical='https://proradiologia.odo.br/exames/',
         breadcrumb=bc,
+        h1='<h1 class="ptitle">Exames de <span>radiologia odontol\u00f3gica</span></h1>',
         content=content
     )
     write_file('exames/index.html', html)
@@ -1101,6 +1097,7 @@ def generate_units_listing():
         description='Conhe\u00e7a as 3 unidades da PRO Radiologia: Presidente Prudente (matriz), Presidente Epit\u00e1cio e Teodoro Sampaio.',
         canonical='https://proradiologia.odo.br/unidades/',
         breadcrumb=bc,
+        h1='<h1 class="ptitle">Nossas <span>unidades</span></h1>',
         content=content
     )
     write_file('unidades/index.html', html)
