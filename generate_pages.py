@@ -55,7 +55,7 @@ def make_page(**kwargs):
 
 <nav id="nav" role="navigation" aria-label="Navega\u00e7\u00e3o principal">
   <a class="nav-logo" href="/" aria-label="PRO Radiologia - P\u00e1gina inicial">
-    <div class="nav-logo-icon" aria-hidden="true">P</div>
+    <img class="nav-logo-icon" src="/imagens/logo-pro.png" alt="PRO Radiologia" width="42" height="42">
     <div class="nav-logo-text">
       <strong>PRO Radiologia</strong>
       <span>Centro de Radiologia Odontol\u00f3gica</span>
@@ -121,7 +121,7 @@ def make_page(**kwargs):
 <footer role="contentinfo">
   <div class="fg-grid">
     <div>
-      <div class="fli" aria-hidden="true">P</div>
+      <img class="fli" src="/imagens/logo-white.png" alt="PRO Radiologia" width="44" height="44">
       <div class="flogo"><strong>PRO Radiologia</strong><span>Centro de Radiologia Odontol\u00f3gica</span></div>
       <p class="fabout">H\u00e1 mais de 40 anos, a PRO Radiologia apoia dentistas e pacientes com exames de imagem em 3 unidades no Oeste Paulista.</p>
       <div class="fsoc">
