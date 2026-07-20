@@ -1,0 +1,79 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; connect-src 'self' https://api.web3forms.com" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/exames/panoramica/", "destination": "/exames/radiografia-panoramica/", "permanent": true },
+    { "source": "/exames/tomografia/", "destination": "/exames/tomografia-cone-beam/", "permanent": true },
+    { "source": "/exames/periapical-boca-toda/", "destination": "/exames/radiografia-periapical/", "permanent": true },
+    { "source": "/interproximal/", "destination": "/exames/radiografia-interproximal/", "permanent": true },
+    { "source": "/exames/presidente-epitacio/", "destination": "/unidades/presidente-epitacio/", "permanent": true },
+    { "source": "/paciente/", "destination": "/para-pacientes/", "permanent": true },
+    { "source": "/requisicao/", "destination": "/requisicao-de-exames/", "permanent": true },
+    { "source": "/localizacao/", "destination": "/unidades/", "permanent": true },
+    { "source": "/proradiologia.html", "destination": "/", "permanent": true },
+    { "source": "/index", "destination": "/", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/exames/documentacao.html", "destination": "/exames/documentacao-ortodontica/", "permanent": true },
+    { "source": "/exames/panoramica.html", "destination": "/exames/radiografia-panoramica/", "permanent": true },
+    { "source": "/exames/periapical.html", "destination": "/exames/radiografia-periapical/", "permanent": true },
+    { "source": "/exames/interproximal.html", "destination": "/exames/radiografia-interproximal/", "permanent": true },
+    { "source": "/exames/tomografia.html", "destination": "/exames/tomografia-cone-beam/", "permanent": true },
+    { "source": "/exames/scanner-intraoral.html", "destination": "/exames/scanner-intraoral/", "permanent": true },
+    { "source": "/blog/tomografia-cone-beam.html", "destination": "/blog/tomografia-cone-beam/", "permanent": true },
+    { "source": "/blog/radiografia-faz-mal.html", "destination": "/blog/radiografia-odontologica-faz-mal/", "permanent": true },
+    { "source": "/blog/documentacao-ortodontica.html", "destination": "/blog/documentacao-ortodontica/", "permanent": true },
+    { "source": "/tomografia-cone-beam.html", "destination": "/exames/tomografia-cone-beam/", "permanent": true },
+    { "source": "/tomografia-new.html", "destination": "/exames/tomografia-cone-beam/", "permanent": true },
+    { "source": "/radiografia-faz-mal.html", "destination": "/blog/radiografia-odontologica-faz-mal/", "permanent": true },
+    { "source": "/documentacao-ortodontica.html", "destination": "/exames/documentacao-ortodontica/", "permanent": true }
+  ],
+  "overrides": {
+    "exames/documentacao-ortodontica.html": { "path": "exames/documentacao-ortodontica/index.html" },
+    "exames/radiografia-panoramica.html": { "path": "exames/radiografia-panoramica/index.html" },
+    "exames/radiografia-periapical.html": { "path": "exames/radiografia-periapical/index.html" },
+    "exames/radiografia-interproximal.html": { "path": "exames/radiografia-interproximal/index.html" },
+    "exames/tomografia-cone-beam.html": { "path": "exames/tomografia-cone-beam/index.html" },
+    "exames/telerradiografia.html": { "path": "exames/telerradiografia/index.html" },
+    "exames/scanner-intraoral.html": { "path": "exames/scanner-intraoral/index.html" },
+    "unidades/presidente-prudente.html": { "path": "unidades/presidente-prudente/index.html" },
+    "unidades/presidente-epitacio.html": { "path": "unidades/presidente-epitacio/index.html" },
+    "unidades/teodoro-sampaio.html": { "path": "unidades/teodoro-sampaio/index.html" },
+    "sobre.html": { "path": "sobre/index.html" },
+    "para-dentistas.html": { "path": "para-dentistas/index.html" },
+    "para-pacientes.html": { "path": "para-pacientes/index.html" },
+    "requisicao-de-exames.html": { "path": "requisicao-de-exames/index.html" },
+    "blog/index.html": { "path": "blog/index.html" },
+    "contato.html": { "path": "contato/index.html" },
+    "politica-de-privacidade.html": { "path": "politica-de-privacidade/index.html" },
+    "termos-de-uso.html": { "path": "termos-de-uso/index.html" },
+    "blog/tomografia-cone-beam.html": { "path": "blog/tomografia-cone-beam/index.html" },
+    "blog/radiografia-odontologica-faz-mal.html": { "path": "blog/radiografia-odontologica-faz-mal/index.html" },
+    "blog/documentacao-ortodontica.html": { "path": "blog/documentacao-ortodontica/index.html" },
+    "404.html": { "path": "404.html" }
+  }
+}

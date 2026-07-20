@@ -1,0 +1,12 @@
+{
+  "name": "PRO Radiologia Odontol\u00f3gica",
+  "short_name": "PRO Radiologia",
+  "description": "Centro de radiologia odontol\u00f3gica no Oeste Paulista",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1A8FE3",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
