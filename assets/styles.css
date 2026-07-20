@@ -75,8 +75,8 @@ nav {
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(255,255,255,.96);
-  border-bottom: 1px solid var(--g2);
+  background: var(--bx);
+  border-bottom: 1px solid rgba(255,255,255,.1);
   padding: 0 5%;
   height: 72px;
   display: flex;
@@ -84,10 +84,30 @@ nav {
   justify-content: space-between;
   transition: box-shadow .3s;
 }
+nav .nav-logo-text strong { color: #fff; }
+nav .nav-logo-text span { color: rgba(255,255,255,.7); }
+nav .nav-links a { color: rgba(255,255,255,.8); }
+nav .nav-links a:hover,
+nav .nav-links a:focus-visible {
+  color: #fff;
+  background: rgba(255,255,255,.12);
+}
+nav .btn-outline {
+  border-color: rgba(255,255,255,.4);
+  color: #fff;
+}
+nav .btn-outline:hover { background: rgba(255,255,255,.12); }
+nav .nav-toggle { color: rgba(255,255,255,.8); }
+nav .nav-toggle:hover { background: rgba(255,255,255,.1); }
+nav .dropdown { background: var(--bx); border-color: rgba(255,255,255,.15); }
+nav .dropdown li a { color: rgba(255,255,255,.75); border-bottom-color: rgba(255,255,255,.08); }
+nav .dropdown li a:hover,
+nav .dropdown li a:focus-visible { background: rgba(255,255,255,.12); color: #fff; padding-left: 24px; }
 nav.scrolled {
-  box-shadow: 0 4px 28px rgba(26,143,227,.13);
+  box-shadow: 0 4px 28px rgba(0,0,0,.25);
   backdrop-filter: blur(18px);
 }
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -1673,10 +1693,10 @@ main > .ptitle ~ .ph {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255,255,255,.98);
-    border-bottom: 1px solid var(--g2);
+    background: var(--bx);
+    border-bottom: 1px solid rgba(255,255,255,.1);
     padding: 16px 5% 120px;
-    box-shadow: 0 8px 32px rgba(26,143,227,.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,.3);
     overflow-y: auto;
     gap: 2px;
     z-index: 199;
